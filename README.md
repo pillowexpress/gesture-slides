@@ -1,3 +1,4 @@
+# Gesture Slides
 A gesture-controlled presentation app that lets you navigate slides using hand gestures detected via webcam. Built with MediaPipe Hands, Reveal.js, and Vite.
 
 ## Features
