@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GestureSlides</title>
+    <style>
+      html, body { height:100%; margin:0; }
+      body { background:#111; color:#eee; font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; display:flex; flex-direction:column; }
+      header { padding: 10px; display:flex; gap:8px; align-items:center; flex: 0 0 auto; flex-wrap: wrap; }
+      header .status { margin-left: auto; color:#0f0; font-size:12px; }
+      button { background:#222; color:#eee; border:1px solid #555; padding:6px 10px; border-radius:4px; cursor:pointer; }
+      button:hover { background:#333; }
+      .hint { font-size: 12px; color:#aaa }
+      #app { flex: 1 1 auto; min-height:0; display:flex; }
+      .reveal { flex: 1 1 auto; height: 100%; }
+      /* Ensure slides content can fit and images don’t overflow */
+      .reveal .slides section img { max-width:100%; max-height:70vh; }
+    </style>
+  </head>
+  <body>
+    <header>
+      <button id="start">Start Presentation (Camera)</button>
+      <button id="togglePointer">Toggle Pointer</button>
+      <span class="hint">Upload a PowerPoint (.pptx) below or place deck.md in /public/slides, or images in /public/slides/images</span>
+      <span class="status" id="status">Idle</span>
+      <div style="padding:10px 0 0;border-top:1px solid #222; width:100%">
+        <form id="pptUploadForm">
+          <input type="file" id="pptFile" accept=".ppt,.pptx" />
+          <button id="uploadBtn" type="submit">Upload PPTX</button>
+          <span class="hint">Requires Python (python + pip) installed for on-device PPTX→image conversion</span>
+        </form>
+      </div>
+    </header>
+    <div id="app">
+      <div class="reveal">
+        <div class="slides">
+          <section>Welcome to GestureSlides</section>
+          <section>Swipe Right → Next slide</section>
+          <section>Swipe Left → Previous slide</section>
+          <section>Open Palm (2s) → Notes panel</section>
+          <section>Pinch (250ms) → Toggle pointer</section>
+          <section>Pinch toggles pointer; D toggles debug panel</section>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>

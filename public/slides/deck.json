@@ -1,0 +1,186 @@
+{
+  "slides": [
+    {
+      "index": 1,
+      "title": "Real Estate Portfolio Analytics: Predictive Modeling & Market Segmentation",
+      "bullets": [
+        "Data-Driven Insights for Revenue Optimization",
+        "Prepared by: Muhammed Kutashi"
+      ],
+      "images": []
+    },
+    {
+      "index": 2,
+      "title": "Two analytical solutions unlock strategic value across the property portfolio",
+      "bullets": [],
+      "images": []
+    },
+    {
+      "index": 3,
+      "title": "Analysis roadmap: From data quality to business recommendations",
+      "bullets": [],
+      "images": []
+    },
+    {
+      "index": 4,
+      "title": "Strategic data cleaning improved dataset quality from 81 to 72 usable features",
+      "bullets": [
+        "19 features had missing data; 4 dropped (>70% missing)",
+        "Skewness-driven imputation: Median for skewed distributions, mean for normal",
+        "Outlier handling: IQR-based capping preserved 96% of data while removing extremes",
+        "Result: Clean dataset of 1,460 properties ready for modeling"
+      ],
+      "images": [
+        "/slides/images/004_1.png"
+      ]
+    },
+    {
+      "index": 5,
+      "title": "Portfolio shows diverse characteristics with saleprice ranging $35K-$755K",
+      "bullets": [
+        "Average property: $181K sale price, 1,515 sq ft living area, built 1971",
+        "Quality distribution: 62% rated \"Typical/Average,\" 37% \"Good\" or better",
+        "Neighborhood concentration: Top 3 neighborhoods represent 33% of portfolio"
+      ],
+      "images": [
+        "/slides/images/005_1.png",
+        "/slides/images/005_2.png"
+      ]
+    },
+    {
+      "index": 6,
+      "title": "Methodical cleaning approach balanced data integrity with information preservation",
+      "bullets": [
+        "Imputation strategy: 15 features filled using statistical methods (median/mean/mode)",
+        "Outlier management: 31 features had outliers capped at IQR boundaries",
+        "Quality assurance: No information loss from arbitrary deletions"
+      ],
+      "images": [
+        "/slides/images/006_1.png"
+      ]
+    },
+    {
+      "index": 7,
+      "title": "Base Gradient Boosting model achieves 86% accuracy in predicting property values",
+      "bullets": [
+        "R² Score: 0.8608 (explains 86.1% of price variance)",
+        "RMSE: $23,892 (13.5% average error)",
+        "MAE: $16,815 (typical prediction error)",
+        "Model Selection: Baseline chosen over tuned due to lower overfitting (5.5% vs 13.8% train-test gap)",
+        "Interpretation: Highly reliable for pricing decisions within ±$24K range"
+      ],
+      "images": [
+        "/slides/images/007_1.png"
+      ]
+    },
+    {
+      "index": 8,
+      "title": "Overall quality dominates pricing with 56% contribution - 4x more than living area",
+      "bullets": [
+        "Quality-driven market: Overall quality alone explains majority of price variance",
+        "Size matters second: Living area and basement size combined contribute 21%",
+        "Garage premium: Garage capacity ranks 4th, contributing 6% to pricing",
+        "Implication: Focus renovation budgets on quality improvements over size expansions"
+      ],
+      "images": [
+        "/slides/images/008_1.png"
+      ]
+    },
+    {
+      "index": 9,
+      "title": "4-cluster solution balances statistical quality with business interpretability",
+      "bullets": [
+        "Tested: K=2 to K=10 using elbow method and silhouette analysis",
+        "Selected: K=4 for actionable segmentation despite K=2 having highest silhouette score",
+        "Rationale: Business value (4 distinct strategies) outweighs marginal statistical gain",
+        "Quality metrics: Silhouette=0.28, Davies-Bouldin=1.31 (acceptable separation)"
+      ],
+      "images": [
+        "/slides/images/009_1.png"
+      ]
+    },
+    {
+      "index": 10,
+      "title": "Portfolio clusters into 4 distinct segments with clear strategic positioning",
+      "bullets": [],
+      "images": [
+        "/slides/images/010_1.png"
+      ]
+    },
+    {
+      "index": 11,
+      "title": "Each segment exhibits distinct property profiles requiring tailored strategies",
+      "bullets": [
+        "Luxury Premium: Newest (1998), largest (2,074 SF), highest quality - premium pricing justified",
+        "Budget Starter: Oldest (1953), smallest (1,072 SF), lowest quality - volume-focused",
+        "Mid-Tier Family: Balanced profile represents portfolio's \"sweet spot\"",
+        "Value Properties: Older construction with decent size - renovation candidates"
+      ],
+      "images": [
+        "/slides/images/011_1.png"
+      ]
+    },
+    {
+      "index": 12,
+      "title": "Budget segment dominates portfolio at 36% while luxury remains constrained at 17%",
+      "bullets": [
+        "Portfolio skew: 64% concentrated in budget + mid-tier segments",
+        "Growth opportunity: Limited luxury inventory (250 units) suggests capacity for premium expansion",
+        "Risk diversification: Good spread across 4 segments reduces market concentration risk"
+      ],
+      "images": [
+        "/slides/images/012_1.png"
+      ]
+    },
+    {
+      "index": 13,
+      "title": "Combined modeling approach delivers comprehensive portfolio intelligence",
+      "bullets": [
+        "This integrated view combines regression precision with segmentation strategy",
+        "Enables simultaneous pricing optimization and portfolio management decisions"
+      ],
+      "images": [
+        "/slides/images/013_1.png"
+      ]
+    },
+    {
+      "index": 14,
+      "title": "Predictive pricing and segmentation enable portfolio optimization",
+      "bullets": [
+        "Use Case 1: Predictive Pricing",
+        "Automate property valuations using model",
+        "86% accuracy enables confident pricing decisions",
+        "Identifies overpriced/undervalued listings",
+        "Use Case 2: Market Segmentation",
+        "4 distinct segments guide investment strategy",
+        "Targeted marketing reduces acquisition costs",
+        "Portfolio rebalancing by segment performance"
+      ],
+      "images": []
+    },
+    {
+      "index": 15,
+      "title": "Model Evaluation & Recommendations",
+      "bullets": [
+        "Model Robustness:",
+        "Regression: 86% R² with ±$24K error (suitable for portfolio decisions)",
+        "Clustering: Moderate separation (0.28 silhouette) but business-interpretable",
+        "Both validated on holdout data; stable performance",
+        "Key Recommendations:",
+        "Deploy regression model for pricing automation",
+        "Use segmentation for better marketing",
+        "Establish quarterly model retraining process",
+        "Expected Impact: Improved pricing accuracy, targeted acquisitions, optimized marketing spend"
+      ],
+      "images": []
+    },
+    {
+      "index": 16,
+      "title": "Thank you for reviewing this analysis",
+      "bullets": [
+        "Thank you for your time and consideration."
+      ],
+      "images": []
+    }
+  ]
+}
